@@ -22,30 +22,36 @@ const HomeBanner = () => {
     renderingCtx.fillStyle = "#0A1E2E";
     renderingCtx.fillRect(0, 0, size.width, size.height);
 
-    renderingElement.addEventListener("mouseover", (ev) => {
+    const startDrawing = (ev) => {
       moving = true;
-      lastX = ev.pageX - renderingElement.offsetLeft;
-      lastY = ev.pageY - renderingElement.offsetTop;
-    });
+      lastX =
+        (ev.touches && ev.touches.length > 0 ? ev.touches[0].pageX : ev.pageX) -
+        renderingElement.offsetLeft;
+      lastY =
+        (ev.touches && ev.touches.length > 0 ? ev.touches[0].pageY : ev.pageY) -
+        renderingElement.offsetTop;
+    };
 
-    renderingElement.addEventListener("click", (ev) => {
-      moving = true;
-      lastX = ev.pageX - renderingElement.offsetLeft;
-      lastY = ev.pageY - renderingElement.offsetTop;
-    });
-
-    renderingElement.addEventListener("mouseup", (ev) => {
+    const stopDrawing = (ev) => {
       moving = false;
-      lastX = ev.pageX - renderingElement.offsetLeft;
-      lastY = ev.pageY - renderingElement.offsetTop;
-    });
+      lastX =
+        (ev.touches && ev.touches.length > 0 ? ev.touches[0].pageX : ev.pageX) -
+        renderingElement.offsetLeft;
+      lastY =
+        (ev.touches && ev.touches.length > 0 ? ev.touches[0].pageY : ev.pageY) -
+        renderingElement.offsetTop;
+    };
 
-    renderingElement.addEventListener("mousemove", (ev) => {
+    const draw = (ev) => {
       if (moving) {
         drawingCtx.globalCompositeOperation = "source-over";
         renderingCtx.globalCompositeOperation = "destination-out";
-        let currentX = ev.pageX - renderingElement.offsetLeft;
-        let currentY = ev.pageY - renderingElement.offsetTop;
+        let currentX =
+          (ev.touches ? ev.touches[0].pageX : ev.pageX) -
+          renderingElement.offsetLeft;
+        let currentY =
+          (ev.touches ? ev.touches[0].pageY : ev.pageY) -
+          renderingElement.offsetTop;
         drawingCtx.lineJoin = "round";
         drawingCtx.moveTo(lastX, lastY);
         drawingCtx.lineTo(currentX, currentY);
@@ -56,7 +62,17 @@ const HomeBanner = () => {
         lastY = currentY;
         renderingCtx.drawImage(drawingElement, 0, 0);
       }
-    });
+    };
+
+    renderingElement.addEventListener("mouseover", startDrawing);
+    renderingElement.addEventListener("mousedown", startDrawing);
+    renderingElement.addEventListener("mouseup", stopDrawing);
+    renderingElement.addEventListener("mousemove", draw);
+
+    // Add event listeners for touch events
+    renderingElement.addEventListener("touchstart", startDrawing);
+    renderingElement.addEventListener("touchend", stopDrawing);
+    renderingElement.addEventListener("touchmove", draw);
   }, [size.height, size.width]);
 
   const container = {

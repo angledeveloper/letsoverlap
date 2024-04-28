@@ -11,6 +11,7 @@
   "dependencies": {
     "framer-motion": "^11.0.3",
     "next": "14.1.0",
+    "next-scratchcard": "^0.0.4",
     "popmotion": "^11.0.5",
     "postcss-100vh-fix": "^1.0.2",
     "react": "^18",
