@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import { images } from "./image-data.js";
+import Image from "next/image.js";
 
 const variants = {
   enter: {
@@ -33,12 +34,12 @@ export default function Gallery() {
   };
 
   return (
-    <div className="   h-full animate-fade   overflow-y-auto mt-2 flex  flex-col ">
+    <div className=" w-full   h-full animate-fade    mt-2 flex  flex-col ">
       <div className="w-[90%]  pt-6 m-auto h-fit flex relative flex-col lg:flex-row  lg:items-center justify-between ">
-        <div className=" text-[32px] font-bold w-full text-left ">
-          This is our work
+        <div className=" text-[32px] font-bold w-full text-center ">
+          About Us
         </div>
-        <div className=" max-md:w-full  w-fit   max-md:mt-4 text-sm md:text-base font-bold flex bg-white ">
+        {/* <div className=" max-md:w-full  w-fit   max-md:mt-4 text-sm md:text-base font-bold flex bg-white ">
           <div
             onClick={() => setSelectedTab("All")}
             className={`p-2 px-3 whitespace-nowrap hover:text-primary-yellow hover:bg-primary-navy  ${
@@ -75,9 +76,55 @@ export default function Gallery() {
           >
             SEO
           </div>
+        </div> */}
+      </div>
+      <div className=" h-[90%] w-full flex flex-col  items-center p-3">
+        <div className=" w-full overflow-hidden rounded-md max-w-[1020px] relative  aspect-video ">
+          <Image
+            alt="about"
+            className=" object-cover object-center"
+            fill
+            src="/about.jpg"
+          />
+        </div>
+        <div className="  md:text-sm text-xs font-medium md:leading-6  leading-5 w-full pt-2 max-w-[1020px]">
+          <p>
+            OVERLAP is a 360 degree Digital Marketing Agency conveying
+            administrations, answers for undertakings around the world. We have
+            built robust and profitable practices in Digital Marketing
+            Application for all the eBusinesses.
+            <br />
+            Our experience and expertise in executing large scale budgeted
+            projects is a complementary mix of project management,
+            business/market analysis and a use of class apart digital marketing
+            technology. Since its inception in 2017, OVERLAP has been harnessing
+            the scope of web-Information Technology, to enable its clients in
+            increasing a serious edge in the business/industry they work in.
+            <br />
+            Our mission is to enable people and companies to increase their
+            “business value” through the use of Digital Marketing Technologies.
+            We aim at delivering services which will open new possibilities for
+            our customers and allow them to work effectively and creatively.
+            <br />
+            <br />
+            <span className=" md:text-lg">
+              Our values are: <span className=" font-bold">LAP</span>
+            </span>
+            <br />
+            <span className=" font-bold  md:text-lg">
+              Leadership , Accountability and Passion
+            </span>
+            <br />
+            So <span className=" font-bold  md:text-lg">Let’s OVERLAP</span>
+          </p>
         </div>
       </div>
-      <div className=" h-[90%] w-full flex md:items-center">
+    </div>
+  );
+}
+
+{
+  /* <div className=" h-[90%] w-full flex md:items-center">
         <div className=" md:w-[90%]  w-[100%] max-w-4xl  max-md:pt-14 mx-auto  md:m-auto h-fit flex relative  flex-col md:items-center ">
           <AnimatePresence initial={false}>
             <motion.img
@@ -172,7 +219,5 @@ export default function Gallery() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
+      </div> */
 }

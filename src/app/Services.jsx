@@ -15,15 +15,14 @@ export default function Team() {
               <Image src="/ser1.png" alt="" fill className=" " />
             </div>
 
-            <div className="flex flex-col items-start mt-4">
+            <div className="flex flex-col items-start mt-2">
               <p className="text-2xl  font-medium">E-Commerce & M-Commerce: </p>
-              <p className="text-sm mt-4 line-clamp-3 font-normal">
+              <p className="text-sm mt-2  font-normal">
                 We are expert in setting up your online shopping application
                 (E-Commerce), Shopify , Amazon Merchant and various other
                 M-Commerce applications further increasing your client base with
                 our targeted shopping Ads across Globe.{" "}
               </p>
-              <span className="font-bold"> More{">"}</span>
             </div>
           </div>
 
@@ -31,15 +30,14 @@ export default function Team() {
             <div className=" relative  max-h-[42vh] w-full aspect-video">
               <Image src="/ser2.png" alt="" fill className=" " />
             </div>
-            <div className="flex flex-col items-start mt-4">
+            <div className="flex flex-col items-start mt-2">
               <p className="text-2xl  font-medium">CMS & CRO</p>
-              <p className="text-sm mt-4 line-clamp-3 font-normal">
+              <p className="text-sm mt-2  font-normal">
                 With extensive CMS deployment experience, we guide you to the
                 ideal CMS for your business. Our specialty lies in cutting-edge
                 conversation retention optimization, ensuring a rich user
                 experience.
               </p>
-              <span className="font-bold"> More{">"}</span>
             </div>
           </div>
 
@@ -47,14 +45,13 @@ export default function Team() {
             <div className=" relative  max-h-[42vh] w-full aspect-video">
               <Image src="/ser3.png" alt="" fill className=" " />
             </div>
-            <div className="flex flex-col items-start mt-4">
+            <div className="flex flex-col items-start mt-2">
               <p className="text-2xl  font-medium">SEO</p>
-              <p className="text-sm mt-4 line-clamp-3 font-normal">
+              <p className="text-sm mt-2  font-normal">
                 Offering complete SEO Solutions, and internet Marketing
                 services. We are a leading SEO Company in India, providing
                 effective Search Engine Optimization’s services in right phases{" "}
               </p>
-              <span className="font-bold"> More{">"}</span>
             </div>
           </div>
 
@@ -62,14 +59,13 @@ export default function Team() {
             <div className=" relative  max-h-[42vh] w-full aspect-video">
               <Image src="/ser4.png" alt="" fill className=" " />
             </div>
-            <div className="flex flex-col items-start mt-4">
+            <div className="flex flex-col items-start mt-2">
               <p className="text-2xl  font-medium"> Advertising & PR: </p>
-              <p className="text-sm mt-4 line-clamp-3 font-normal">
+              <p className="text-sm mt-2  font-normal">
                 We help you build your professional relations with your audience
                 & key partners through our Advertising services (Paid social &
                 Google) and if required some Corporate/Social PR services too.
               </p>
-              <span className="font-bold"> More{">"}</span>
             </div>
           </div>
         </div>

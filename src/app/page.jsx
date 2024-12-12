@@ -71,13 +71,13 @@ export default function Home() {
   return (
     <div className=" w-full overflow-hidden h-full grid">
       <div className="  w-full h-full">
-        {menuScreens === "home" ? (
+        {/* {menuScreens === "home" ? (
           <div className=" hidden md:block">
             <HomeBanner />
           </div>
-        ) : null}
+        ) : null}*/}
 
-        <div className=" block md:hidden">
+        <div className=" block ">
           <HomeBanner />
         </div>
 
@@ -144,10 +144,10 @@ export default function Home() {
                       ease: "easeInOut",
                     }}
                   >
-                    Our Work
+                    About us
                   </motion.span>
                 </motion.div>
-                <motion.div
+                {/* <motion.div
                   onClick={() => {
                     setMobilePage("blogs");
                     onClick();
@@ -166,7 +166,7 @@ export default function Home() {
                   >
                     Blogs
                   </motion.span>
-                </motion.div>
+                </motion.div> */}
                 <motion.div
                   onClick={() => {
                     setMobilePage("services");
@@ -187,7 +187,7 @@ export default function Home() {
                     Services
                   </motion.span>
                 </motion.div>
-                <motion.div
+                {/* <motion.div
                   onClick={() => {
                     setMobilePage("ourteam");
                     onClick();
@@ -206,7 +206,7 @@ export default function Home() {
                   >
                     Our Team
                   </motion.span>
-                </motion.div>
+                </motion.div> */}
                 <motion.div
                   onClick={() => {
                     setMobilePage("contact");
@@ -234,19 +234,19 @@ export default function Home() {
             <div className=" w-full fixed top-24 left-0 adjust max-h-[calc(100vh-6rem)] bg-primary-yellow flex items-center  text-3xl font-bold ">
               <Gallery />
             </div>
-          ) : mobilePage === "blogs" ? (
-            <div className=" w-full fixed top-24 left-0 adjust max-h-[calc(100vh-6rem)] bg-white  flex items-center  text-3xl font-bold ">
-              <Blog />
-            </div>
-          ) : mobilePage === "services" ? (
+          ) : // ) : mobilePage === "blogs" ? (
+          //   <div className=" w-full fixed top-24 left-0 adjust max-h-[calc(100vh-6rem)] bg-white  flex items-center  text-3xl font-bold ">
+          //     <Blog />
+          //   </div>
+          mobilePage === "services" ? (
             <div className=" w-full fixed top-24 left-0 adjust max-h-[calc(100vh-6rem)] bg-primary-green  flex items-center  text-3xl font-bold ">
               <Services />
             </div>
-          ) : mobilePage === "ourteam" ? (
-            <div className=" w-full fixed top-24 left-0 adjust max-h-[calc(100vh-6rem)] bg-white flex items-center  text-3xl font-bold ">
-              <Team />
-            </div>
-          ) : mobilePage === "contact" ? (
+          ) : // ) : mobilePage === "ourteam" ? (
+          //   <div className=" w-full fixed top-24 left-0 adjust max-h-[calc(100vh-6rem)] bg-white flex items-center  text-3xl font-bold ">
+          //     <Team />
+          //   </div>
+          mobilePage === "contact" ? (
             <div className=" w-full fixed top-24 left-0 adjust max-h-[calc(100vh-6rem)] bg-primary-red  flex items-center  text-3xl font-bold ">
               <Contact />
             </div>
@@ -255,7 +255,7 @@ export default function Home() {
 
         <div className="   absolute top-36 left-28 md:hidden">
           <div className=" flex-col  pointer-events-none h-full items-end flex justify-between w-full py-8">
-            <div className="text-gray-300 md:text-base flex   items-end  text-xs  md:max-w-md  max-w-60  pointer-events-none  flex-col gap-1.5">
+            {/* <div className="text-gray-300 md:text-base flex   items-end  text-xs  md:max-w-md  max-w-60  pointer-events-none  flex-col gap-1.5">
               <span className=" text-primary-white mb-2  font-bold">
                 OVERLAP is a global 360-degree Digital Marketing Agency,
                 specializing in profitable Digital Marketing solutions for
@@ -267,7 +267,7 @@ export default function Home() {
                 value through creative and effective use of Digital Marketing
                 Technologies.
               </span>
-            </div>
+            </div> */}
             {menu ? (
               <div
                 onClick={() => setMenu(false)}
@@ -294,7 +294,7 @@ export default function Home() {
           >
             {menuScreens === "home" ? (
               <div className=" flex-col  pointer-events-none h-full items-end flex justify-between w-full py-8">
-                <div className="text-gray-300 md:text-base flex   items-end  text-xs  md:max-w-md  max-w-60  pointer-events-none  flex-col gap-1.5">
+                {/* <div className="text-gray-300 md:text-base flex   items-end  text-xs  md:max-w-md  max-w-60  pointer-events-none  flex-col gap-1.5">
                   <span className=" text-primary-white mb-2  font-bold">
                     OVERLAP is a global 360-degree Digital Marketing Agency,
                     specializing in profitable Digital Marketing solutions for
@@ -306,7 +306,7 @@ export default function Home() {
                     business value through creative and effective use of Digital
                     Marketing Technologies.
                   </span>
-                </div>
+                </div> */}
                 {menu ? (
                   <div
                     onClick={() => setMenu(false)}
@@ -370,7 +370,17 @@ export default function Home() {
                   setMenu(false);
                 }}
                 className=" pointer-events-auto cursor-pointer group md:w-60 md:h-full w-full h-16  bg-black"
-              ></div>
+              >
+                <div className=" h-full  w-full ">
+                  <video
+                    className="object-cover  object-left h-full  w-full "
+                    loop
+                    muted
+                    autoPlay
+                    src="./hero.mp4"
+                  />
+                </div>
+              </div>
             )}
             <div
               onClick={() => {
@@ -392,27 +402,27 @@ export default function Home() {
               {menuScreens === "home" ? (
                 menu ? (
                   <div className="  font-sans font-bold  text-2xl md:text-3xl overflow-hidden   flex md:flex-col w-full h-full items-center justify-start  opacity-100">
-                    <div className=" bg-white flex max-md:justify-center   items-center md:items-center md:w-full md:h-44 h-full w-[40%] ">
+                    {/* <div className=" bg-white flex max-md:justify-center   items-center md:items-center md:w-full md:h-44 h-full w-[40%] ">
                       <span className=" md:-rotate-90 h-fit whitespace-nowrap">
                         Blog
                       </span>
-                    </div>
-                    <div className="  overflow-hidden flex max-md:w-full max-md:justify-center md:items-end md:h-[calc(100%-11rem)]">
+                    </div> */}
+                    <div className="  overflow-hidden flex max-md:w-full max-md:justify-center md:items-end ">
                       <span className=" md:-rotate-90 md:mb-24 h-fit whitespace-nowrap">
-                        Our Work
+                        About us
                       </span>
                     </div>
                   </div>
                 ) : (
                   <div className=" font-sans font-bold  text-2xl md:text-3xl overflow-hidden   flex md:flex-col w-full h-full items-center justify-start  opacity-100 md:transition-all md:ease-in-out ">
-                    <div className="  bg-white flex max-md:justify-center items-center  md:items-center md:w-full md:h-44 h-full w-[40%] ">
+                    {/* <div className="  bg-white flex max-md:justify-center items-center  md:items-center md:w-full md:h-44 h-full w-[40%] ">
                       <span className=" md:opacity-0  md:group-hover:opacity-100 duration-300  md:-rotate-90 h-fit whitespace-nowrap">
                         Blog
                       </span>
-                    </div>
-                    <div className="  md:opacity-0  md:group-hover:opacity-100 duration-300 overflow-hidden flex max-md:w-full max-md:justify-center md:items-end md:h-[calc(100%-11rem)]">
+                    </div> */}
+                    <div className="  md:opacity-0  md:group-hover:opacity-100 duration-300 overflow-hidden flex max-md:w-full max-md:justify-center md:items-end md:h-full">
                       <span className=" md:-rotate-90 md:mb-24 h-fit whitespace-nowrap">
-                        Our Work
+                        About us
                       </span>
                     </div>
                   </div>
@@ -424,7 +434,7 @@ export default function Home() {
                   } 
              } h-full w-full max-md:max-h-[calc(100vh-11rem)] `}
                 >
-                  <div
+                  {/* <div
                     className={` bg-white md:w-full 
                   ${
                     menuScreens === "work"
@@ -434,21 +444,21 @@ export default function Home() {
                   `}
                   >
                     <Blog />
-                  </div>
-                  <div className=" w-full h-[calc(100%-7rem)] md:h-[calc(100%-11rem)] overflow-hidden ">
+                  </div> */}
+                  <div className=" w-full  overflow-hidden ">
                     <Gallery />
                   </div>
                 </div>
               ) : (
                 <div className="  font-sans font-bold  text-2xl md:text-3xl overflow-hidden   flex md:flex-col w-full h-full items-center justify-start  opacity-100">
-                  <div className=" bg-white  items-center  flex max-md:justify-center md:items-center md:w-full md:h-44 h-full w-[40%] ">
+                  {/* <div className=" bg-white  items-center  flex max-md:justify-center md:items-center md:w-full md:h-44 h-full w-[40%] ">
                     <span className=" md:-rotate-90 h-fit whitespace-nowrap">
                       Blog
                     </span>
-                  </div>
-                  <div className="  overflow-hidden flex max-md:w-full max-md:justify-center md:items-end md:h-[calc(100%-11rem)]">
+                  </div> */}
+                  <div className="  overflow-hidden flex max-md:w-full max-md:justify-center md:items-end md:h-full">
                     <span className=" md:-rotate-90 md:mb-24 h-fit whitespace-nowrap">
-                      Our Work
+                      About us
                     </span>
                   </div>
                 </div>
@@ -528,29 +538,29 @@ export default function Home() {
               {menuScreens === "home" ? (
                 menu ? (
                   <div className="  font-sans font-bold  text-2xl md:text-3xl overflow-hidden   flex md:flex-col w-full h-full items-center justify-start  opacity-100">
-                    <div className="  overflow-hidden flex max-md:w-full max-md:justify-center md:items-end md:h-[calc(100%-13rem)]">
+                    <div className="  overflow-hidden flex max-md:w-full max-md:justify-center md:items-end ">
                       <span className=" md:-rotate-90 md:mb-24 h-fit whitespace-nowrap">
                         Contact
                       </span>
                     </div>
-                    <div className=" bg-white flex max-md:justify-center   items-center md:items-center md:w-full md:h-52 h-full w-[40%] ">
+                    {/* <div className=" bg-white flex max-md:justify-center   items-center md:items-center md:w-full md:h-52 h-full w-[40%] ">
                       <span className=" md:-rotate-90 h-fit whitespace-nowrap">
                         Team
                       </span>
-                    </div>
+                    </div> */}
                   </div>
                 ) : (
                   <div className=" font-sans font-bold  text-2xl md:text-3xl overflow-hidden   flex md:flex-col w-full h-full items-center justify-start  opacity-100 md:transition-all md:ease-in-out ">
-                    <div className="  md:opacity-0  md:group-hover:opacity-100 duration-300 overflow-hidden flex max-md:w-full max-md:justify-center md:items-end md:h-[calc(100%-13rem)]">
+                    <div className="  md:opacity-0  md:group-hover:opacity-100 duration-300 overflow-hidden flex max-md:w-full max-md:justify-center md:items-end md:h-full">
                       <span className=" md:-rotate-90 md:mb-24 h-fit whitespace-nowrap">
-                        Contact
+                        Contact Us
                       </span>
                     </div>
-                    <div className="  bg-white group flex max-md:justify-center items-center  md:items-center md:w-full md:h-52 h-full w-[40%] ">
+                    {/* <div className="  bg-white group flex max-md:justify-center items-center  md:items-center md:w-full md:h-52 h-full w-[40%] ">
                       <span className=" md:opacity-0  md:group-hover:opacity-100 duration-300  md:-rotate-90  h-fit whitespace-nowrap">
                         Team
                       </span>
-                    </div>
+                    </div> */}
                   </div>
                 )
               ) : menuScreens === "contact" ? (
@@ -568,7 +578,7 @@ export default function Home() {
                     <Contact />
                   </div>
 
-                  <div
+                  {/* <div
                     className={` bg-white md:w-full 
                   ${
                     menuScreens === "contact"
@@ -578,20 +588,20 @@ export default function Home() {
                   `}
                   >
                     <Team />
-                  </div>
+                  </div> */}
                 </div>
               ) : (
                 <div className="  font-sans font-bold  text-2xl md:text-3xl overflow-hidden   flex md:flex-col w-full h-full items-center justify-start  opacity-100">
-                  <div className="  overflow-hidden flex max-md:w-full max-md:justify-center md:items-end md:h-[calc(100%-13rem)]">
+                  <div className="  overflow-hidden flex max-md:w-full max-md:justify-center md:items-end md:h-full">
                     <span className=" md:-rotate-90 md:mb-24 h-fit whitespace-nowrap">
-                      Contact
+                      Contact us
                     </span>
                   </div>
-                  <div className=" bg-white  items-center  flex max-md:justify-center md:items-center md:w-full md:h-52 h-full w-[40%] ">
+                  {/* <div className=" bg-white  items-center  flex max-md:justify-center md:items-center md:w-full md:h-52 h-full w-[40%] ">
                     <span className=" md:-rotate-90 h-fit whitespace-nowrap">
                       Team
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               )}
             </div>
