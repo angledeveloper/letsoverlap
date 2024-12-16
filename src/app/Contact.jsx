@@ -25,7 +25,15 @@ const Contact = () => {
               />
             </div>
 
-            <div className=" opacity-90">
+            <div className=" opacity-90 ">
+              <input
+                type="text"
+                placeholder="My country is...."
+                className="p-4 w-full lg:w-[70%]  outline-none h-18 placeholder:font-sans placeholder:font-normal placeholder:text-sm  placeholder:text-primary-gray text-primary-gray opacity-100"
+              />
+            </div>
+
+            <div className=" opacity-85">
               <input
                 type="email"
                 placeholder="My email is...."
@@ -37,6 +45,14 @@ const Contact = () => {
               <input
                 type="tel"
                 placeholder="You can call me on...."
+                className="p-4 w-full lg:w-[70%] placeholder:font-sans h-18 outline-none placeholder:font-normal placeholder:text-sm  placeholder:text-primary-gray text-primary-gray"
+              />
+            </div>
+
+            <div className=" opacity-75 placeholder:font-sans  outline-none placeholder:font-normal placeholder:text-sm  placeholder:text-primary-gray text-primary-gray">
+              <input
+                type="text"
+                placeholder="I heard about you on...."
                 className="p-4 w-full lg:w-[70%] placeholder:font-sans h-18 outline-none placeholder:font-normal placeholder:text-sm  placeholder:text-primary-gray text-primary-gray"
               />
             </div>
@@ -58,7 +74,7 @@ const Contact = () => {
 
             <textarea
               placeholder="To tell you in details..."
-              className="p-4 opacity-60 w-[100%] h-32 resize-none lg:rounded-b-xl opacity-100 placeholder:font-sans outline-none placeholder:font-normal placeholder:text-sm  placeholder:text-primary-gray text-primary-gray"
+              className="p-4 opacity-60 w-[100%] h-32 resize-none lg:rounded-b-xl placeholder:font-sans outline-none placeholder:font-normal placeholder:text-sm  placeholder:text-primary-gray text-primary-gray"
             ></textarea>
 
             <button
